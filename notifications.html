@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notifications | SkillBridge</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold fs-4"
+           href="index.html">
+
+            <span class="text-primary">Skill</span>Bridge
+
+        </a>
+
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#studentNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse"
+             id="studentNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="student-dashboard.html">
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="projects.html">
+
+                        Find Projects
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="my-applications.html">
+
+                        My Applications
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="reviews.html">
+
+                        Reviews
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="student-profile.html">
+
+                        Profile
+
+                    </a>
+
+                </li>
+
+
+                <!-- ACTIVE NOTIFICATIONS -->
+                <li class="nav-item ms-lg-2">
+
+                    <a href="notifications.html"
+                       class="btn btn-primary position-relative">
+
+                        <i class="bi bi-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= MAIN ================= -->
+<main class="container py-5">
+
+
+    <!-- ================= HEADER ================= -->
+    <div class="dashboard-welcome mb-4">
+
+        <div>
+
+            <span class="dashboard-small-label">
+                STUDENT WORKSPACE
+            </span>
+
+            <h1 class="fw-bold mt-2">
+                Notifications
+            </h1>
+
+            <p class="text-muted mb-0">
+                Stay updated with your applications, projects, reviews, and account activity.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <button class="btn btn-outline-primary"
+                    onclick="markAllRead()">
+
+                <i class="bi bi-check2-all me-2"></i>
+
+                Mark All as Read
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= NOTIFICATION SUMMARY ================= -->
+    <div class="row g-4 mb-4">
+
+
+        <div class="col-md-4">
+
+            <div class="dashboard-stat-card">
+
+                <div class="dashboard-stat-icon">
+
+                    <i class="bi bi-bell"></i>
+
+                </div>
+
+                <div>
+
+                    <small class="text-muted">
+                        Total Notifications
+                    </small>
+
+                    <h3 class="fw-bold mb-0"
+                        id="totalNotifications">
+                        6
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-md-4">
+
+            <div class="dashboard-stat-card">
+
+                <div class="dashboard-stat-icon">
+
+                    <i class="bi bi-envelope"></i>
+
+                </div>
+
+                <div>
+
+                    <small class="text-muted">
+                        Unread
+                    </small>
+
+                    <h3 class="fw-bold mb-0"
+                        id="unreadNotifications">
+                        4
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-md-4">
+
+            <div class="dashboard-stat-card">
+
+                <div class="dashboard-stat-icon">
+
+                    <i class="bi bi-check-circle"></i>
+
+                </div>
+
+                <div>
+
+                    <small class="text-muted">
+                        Activity Updates
+                    </small>
+
+                    <h3 class="fw-bold mb-0">
+                        6
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= NOTIFICATIONS CARD ================= -->
+    <div class="dashboard-card">
+
+
+        <!-- CARD HEADER -->
+        <div class="dashboard-card-header mb-4">
+
+            <div>
+
+                <h5 class="fw-bold mb-1">
+                    Recent Notifications
+                </h5>
+
+                <p class="text-muted mb-0">
+                    Your latest SkillBridge updates.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <button class="btn btn-sm btn-outline-secondary"
+                        onclick="clearNotifications()">
+
+                    <i class="bi bi-trash me-1"></i>
+
+                    Clear All
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= NOTIFICATION 1 ================= -->
+        <div class="notification-item border rounded-3 p-3 mb-3 unread"
+             data-read="false">
+
+            <div class="d-flex align-items-start">
+
+                <div class="dashboard-stat-icon me-3 flex-shrink-0">
+
+                    <i class="bi bi-check-circle text-success"></i>
+
+                </div>
+
+
+                <div class="flex-grow-1">
+
+                    <div class="d-flex justify-content-between align-items-start gap-3">
+
+                        <div>
+
+                            <h6 class="fw-bold mb-1">
+                                Application Accepted
+                            </h6>
+
+                            <p class="text-muted mb-1">
+                                Your application for
+                                <strong>Business Website Development</strong>
+                                has been accepted by ABC Local Business.
+                            </p>
+
+                            <small class="text-muted">
+                                <i class="bi bi-clock me-1"></i>
+                                Today, 10:30 AM
+                            </small>
+
+                        </div>
+
+
+                        <span class="badge bg-primary-subtle text-primary-emphasis notification-unread-badge">
+                            New
+                        </span>
+
+                    </div>
+
+
+                    <div class="mt-3">
+
+                        <a href="student-project-tracking.html"
+                           class="btn btn-sm btn-primary">
+
+                            <i class="bi bi-kanban me-1"></i>
+
+                            Track Project
+
+                        </a>
+
+                        <button class="btn btn-sm btn-outline-secondary ms-2"
+                                onclick="markAsRead(this)">
+
+                            Mark as Read
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= NOTIFICATION 2 ================= -->
+        <div class="notification-item border rounded-3 p-3 mb-3 unread"
+             data-read="false">
+
+            <div class="d-flex align-items-start">
+
+                <div class="dashboard-stat-icon me-3 flex-shrink-0">
+
+                    <i class="bi bi-file-earmark-text text-primary"></i>
+
+                </div>
+
+
+                <div class="flex-grow-1">
+
+                    <div class="d-flex justify-content-between align-items-start gap-3">
+
+                        <div>
+
+                            <h6 class="fw-bold mb-1">
+                                Application Under Review
+                            </h6>
+
+                            <p class="text-muted mb-1">
+                                Your application for
+                                <strong>Social Media Content Creation</strong>
+                                is currently being reviewed by TechZone.
+                            </p>
+
+                            <small class="text-muted">
+                                <i class="bi bi-clock me-1"></i>
+                                Yesterday, 4:20 PM
+                            </small>
+
+                        </div>
+
+
+                        <span class="badge bg-primary-subtle text-primary-emphasis notification-unread-badge">
+                            New
+                        </span>
+
+                    </div>
+
+
+                    <div class="mt-3">
+
+                        <a href="my-applications.html"
+                           class="btn btn-sm btn-outline-primary">
+
+                            <i class="bi bi-send me-1"></i>
+
+                            View Application
+
+                        </a>
+
+                        <button class="btn btn-sm btn-outline-secondary ms-2"
+                                onclick="markAsRead(this)">
+
+                            Mark as Read
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= NOTIFICATION 3 ================= -->
+        <div class="notification-item border rounded-3 p-3 mb-3 unread"
+             data-read="false">
+
+            <div class="d-flex align-items-start">
+
+                <div class="dashboard-stat-icon me-3 flex-shrink-0">
+
+                    <i class="bi bi-star text-warning"></i>
+
+                </div>
+
+
+                <div class="flex-grow-1">
+
+                    <div class="d-flex justify-content-between align-items-start gap-3">
+
+                        <div>
+
+                            <h6 class="fw-bold mb-1">
+                                New Review Received
+                            </h6>
+
+                            <p class="text-muted mb-1">
+                                ABC Local Business has submitted a
+                                <strong>5.0 star review</strong>
+                                for your completed project.
+                            </p>
+
+                            <small class="text-muted">
+                                <i class="bi bi-clock me-1"></i>
+                                2 days ago
+                            </small>
+
+                        </div>
+
+
+                        <span class="badge bg-primary-subtle text-primary-emphasis notification-unread-badge">
+                            New
+                        </span>
+
+                    </div>
+
+
+                    <div class="mt-3">
+
+                        <a href="reviews.html"
+                           class="btn btn-sm btn-outline-primary">
+
+                            <i class="bi bi-star me-1"></i>
+
+                            View Review
+
+                        </a>
+
+                        <button class="btn btn-sm btn-outline-secondary ms-2"
+                                onclick="markAsRead(this)">
+
+                            Mark as Read
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= NOTIFICATION 4 ================= -->
+        <div class="notification-item border rounded-3 p-3 mb-3 unread"
+             data-read="false">
+
+            <div class="d-flex align-items-start">
+
+                <div class="dashboard-stat-icon me-3 flex-shrink-0">
+
+                    <i class="bi bi-briefcase text-info"></i>
+
+                </div>
+
+
+                <div class="flex-grow-1">
+
+                    <div class="d-flex justify-content-between align-items-start gap-3">
+
+                        <div>
+
+                            <h6 class="fw-bold mb-1">
+                                New Project Recommendation
+                            </h6>
+
+                            <p class="text-muted mb-1">
+                                A new project matching your
+                                <strong>Web Development</strong>
+                                skills is now available.
+                            </p>
+
+                            <small class="text-muted">
+                                <i class="bi bi-clock me-1"></i>
+                                3 days ago
+                            </small>
+
+                        </div>
+
+
+                        <span class="badge bg-primary-subtle text-primary-emphasis notification-unread-badge">
+                            New
+                        </span>
+
+                    </div>
+
+
+                    <div class="mt-3">
+
+                        <a href="projects.html"
+                           class="btn btn-sm btn-outline-primary">
+
+                            <i class="bi bi-search me-1"></i>
+
+                            Browse Projects
+
+                        </a>
+
+                        <button class="btn btn-sm btn-outline-secondary ms-2"
+                                onclick="markAsRead(this)">
+
+                            Mark as Read
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= NOTIFICATION 5 ================= -->
+        <div class="notification-item border rounded-3 p-3 mb-3"
+             data-read="true">
+
+            <div class="d-flex align-items-start">
+
+                <div class="dashboard-stat-icon me-3 flex-shrink-0">
+
+                    <i class="bi bi-person-check text-success"></i>
+
+                </div>
+
+
+                <div class="flex-grow-1">
+
+                    <div class="d-flex justify-content-between align-items-start gap-3">
+
+                        <div>
+
+                            <h6 class="fw-bold mb-1">
+                                Profile Updated Successfully
+                            </h6>
+
+                            <p class="text-muted mb-1">
+                                Your student profile and skills information
+                                have been updated successfully.
+                            </p>
+
+                            <small class="text-muted">
+                                <i class="bi bi-clock me-1"></i>
+                                5 days ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mt-3">
+
+                        <a href="student-profile.html"
+                           class="btn btn-sm btn-outline-primary">
+
+                            <i class="bi bi-person me-1"></i>
+
+                            View Profile
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= NOTIFICATION 6 ================= -->
+        <div class="notification-item border rounded-3 p-3"
+             data-read="true">
+
+            <div class="d-flex align-items-start">
+
+                <div class="dashboard-stat-icon me-3 flex-shrink-0">
+
+                    <i class="bi bi-shield-check text-success"></i>
+
+                </div>
+
+
+                <div class="flex-grow-1">
+
+                    <div class="d-flex justify-content-between align-items-start gap-3">
+
+                        <div>
+
+                            <h6 class="fw-bold mb-1">
+                                Student Profile Verified
+                            </h6>
+
+                            <p class="text-muted mb-1">
+                                Your SkillBridge student profile has been
+                                successfully verified.
+                            </p>
+
+                            <small class="text-muted">
+                                <i class="bi bi-clock me-1"></i>
+                                1 week ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="mt-3">
+
+                        <a href="student-profile.html"
+                           class="btn btn-sm btn-outline-primary">
+
+                            <i class="bi bi-person-badge me-1"></i>
+
+                            View Profile
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= EMPTY STATE ================= -->
+        <div id="emptyNotifications"
+             class="text-center py-5 d-none">
+
+            <div class="dashboard-stat-icon mx-auto mb-3">
+
+                <i class="bi bi-bell-slash"></i>
+
+            </div>
+
+            <h5 class="fw-bold">
+                No Notifications
+            </h5>
+
+            <p class="text-muted mb-0">
+                You are all caught up. New activity will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer-section mt-5">
+
+    <div class="container py-4">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <h5 class="fw-bold mb-1">
+
+                    <span class="text-primary">Skill</span>Bridge
+
+                </h5>
+
+                <p class="text-muted mb-0">
+                    Connecting student talent with real business opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <a href="index.html"
+                   class="text-decoration-none text-muted me-3">
+                    Home
+                </a>
+
+                <a href="how-it-works.html"
+                   class="text-decoration-none text-muted me-3">
+                    How It Works
+                </a>
+
+                <a href="contact.html"
+                   class="text-decoration-none text-muted">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+
+    function updateUnreadCount() {
+
+        const unreadItems =
+            document.querySelectorAll(
+                '.notification-item[data-read="false"]'
+            );
+
+        document.getElementById("unreadNotifications").textContent =
+            unreadItems.length;
+
+    }
+
+
+
+    function markAsRead(button) {
+
+        const notification =
+            button.closest(".notification-item");
+
+        notification.setAttribute("data-read", "true");
+
+        notification.classList.remove("unread");
+
+        const badge =
+            notification.querySelector(".notification-unread-badge");
+
+        if (badge) {
+            badge.remove();
+        }
+
+        button.remove();
+
+        updateUnreadCount();
+
+    }
+
+
+
+    function markAllRead() {
+
+        const notifications =
+            document.querySelectorAll(".notification-item");
+
+        notifications.forEach(function (notification) {
+
+            notification.setAttribute("data-read", "true");
+
+            notification.classList.remove("unread");
+
+            const badge =
+                notification.querySelector(".notification-unread-badge");
+
+            if (badge) {
+                badge.remove();
+            }
+
+            const button =
+                notification.querySelector(
+                    'button[onclick="markAsRead(this)"]'
+                );
+
+            if (button) {
+                button.remove();
+            }
+
+        });
+
+        updateUnreadCount();
+
+    }
+
+
+
+    function clearNotifications() {
+
+        const notifications =
+            document.querySelectorAll(".notification-item");
+
+        notifications.forEach(function (notification) {
+
+            notification.remove();
+
+        });
+
+        document.getElementById("totalNotifications").textContent = "0";
+
+        document.getElementById("unreadNotifications").textContent = "0";
+
+        document.getElementById("emptyNotifications")
+            .classList.remove("d-none");
+
+    }
+
+
+    updateUnreadCount();
+
+</script>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

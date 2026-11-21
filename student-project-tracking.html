@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Tracking | SkillBridge</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-briefcase-fill me-2"></i>
+            SkillBridge
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="student-dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">
+                        Find Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="my-applications.html">
+                        My Applications
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="student-profile.html">
+                        Profile
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-2">
+                    <a class="btn btn-outline-primary px-4"
+                       href="settings.html">
+                        <i class="bi bi-gear me-1"></i>
+                        Settings
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= BREADCRUMB ================= -->
+<section class="py-3 bg-light">
+
+    <div class="container">
+
+        <nav aria-label="breadcrumb">
+
+            <ol class="breadcrumb mb-0">
+
+                <li class="breadcrumb-item">
+                    <a href="student-dashboard.html"
+                       class="text-decoration-none">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="breadcrumb-item">
+                    <a href="my-applications.html"
+                       class="text-decoration-none">
+                        My Applications
+                    </a>
+                </li>
+
+                <li class="breadcrumb-item active">
+                    Project Tracking
+                </li>
+
+            </ol>
+
+        </nav>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="py-4">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between
+                    align-items-center flex-wrap gap-3">
+
+            <div>
+
+                <span class="badge bg-success mb-2">
+                    Active Project
+                </span>
+
+                <h2 class="fw-bold mb-1">
+                    Business Website Development
+                </h2>
+
+                <p class="text-muted mb-0">
+                    Project with ABC Local Business
+                </p>
+
+            </div>
+
+            <a href="my-applications.html"
+               class="btn btn-outline-secondary">
+
+                <i class="bi bi-arrow-left me-2"></i>
+                Back to Applications
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECT SUMMARY ================= -->
+<section class="pb-4">
+
+    <div class="container">
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body p-4">
+
+                <div class="row g-4">
+
+                    <!-- Budget -->
+                    <div class="col-md-3">
+
+                        <div class="d-flex align-items-center">
+
+                            <div class="bg-light rounded p-3 me-3">
+                                <i class="bi bi-cash-stack text-primary fs-4"></i>
+                            </div>
+
+                            <div>
+
+                                <small class="text-muted d-block">
+                                    Project Budget
+                                </small>
+
+                                <strong>
+                                    Rs. 10,000
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Deadline -->
+                    <div class="col-md-3">
+
+                        <div class="d-flex align-items-center">
+
+                            <div class="bg-light rounded p-3 me-3">
+                                <i class="bi bi-calendar-event text-primary fs-4"></i>
+                            </div>
+
+                            <div>
+
+                                <small class="text-muted d-block">
+                                    Deadline
+                                </small>
+
+                                <strong>
+                                    15 Days
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Category -->
+                    <div class="col-md-3">
+
+                        <div class="d-flex align-items-center">
+
+                            <div class="bg-light rounded p-3 me-3">
+                                <i class="bi bi-folder text-primary fs-4"></i>
+                            </div>
+
+                            <div>
+
+                                <small class="text-muted d-block">
+                                    Category
+                                </small>
+
+                                <strong>
+                                    Web Development
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Status -->
+                    <div class="col-md-3">
+
+                        <div class="d-flex align-items-center">
+
+                            <div class="bg-light rounded p-3 me-3">
+                                <i class="bi bi-activity text-primary fs-4"></i>
+                            </div>
+
+                            <div>
+
+                                <small class="text-muted d-block">
+                                    Current Status
+                                </small>
+
+                                <strong class="text-success">
+                                    In Progress
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN TRACKING SECTION ================= -->
+<section class="py-4">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- ================= LEFT ================= -->
+            <div class="col-lg-8">
+
+                <!-- Progress -->
+                <div class="card border-0 shadow-sm mb-4">
+
+                    <div class="card-body p-4">
+
+                        <div class="d-flex justify-content-between
+                                    align-items-center mb-3">
+
+                            <div>
+
+                                <h5 class="fw-bold mb-1">
+                                    Project Progress
+                                </h5>
+
+                                <p class="text-muted small mb-0">
+                                    Track the current progress of your project.
+                                </p>
+
+                            </div>
+
+                            <strong class="text-primary">
+                                65%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress"
+                             style="height: 10px;">
+
+                            <div class="progress-bar"
+                                 role="progressbar"
+                                 style="width: 65%;"
+                                 aria-valuenow="65"
+                                 aria-valuemin="0"
+                                 aria-valuemax="100">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project Timeline -->
+                <div class="card border-0 shadow-sm mb-4">
+
+                    <div class="card-body p-4">
+
+                        <h5 class="fw-bold mb-4">
+                            Project Timeline
+                        </h5>
+
+
+                        <!-- Step 1 -->
+                        <div class="d-flex mb-4">
+
+                            <div class="me-3">
+
+                                <div class="bg-success text-white rounded-circle
+                                            d-flex align-items-center justify-content-center"
+                                     style="width:42px;height:42px;">
+
+                                    <i class="bi bi-check-lg"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    Application Selected
+                                </h6>
+
+                                <p class="text-muted small mb-1">
+                                    Your application was accepted by the business.
+                                </p>
+
+                                <small class="text-muted">
+                                    Completed
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Step 2 -->
+                        <div class="d-flex mb-4">
+
+                            <div class="me-3">
+
+                                <div class="bg-success text-white rounded-circle
+                                            d-flex align-items-center justify-content-center"
+                                     style="width:42px;height:42px;">
+
+                                    <i class="bi bi-check-lg"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    Project Started
+                                </h6>
+
+                                <p class="text-muted small mb-1">
+                                    Project requirements and scope were confirmed.
+                                </p>
+
+                                <small class="text-muted">
+                                    Completed
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Step 3 -->
+                        <div class="d-flex mb-4">
+
+                            <div class="me-3">
+
+                                <div class="bg-primary text-white rounded-circle
+                                            d-flex align-items-center justify-content-center"
+                                     style="width:42px;height:42px;">
+
+                                    <i class="bi bi-arrow-repeat"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    Work in Progress
+                                </h6>
+
+                                <p class="text-muted small mb-1">
+                                    You are currently working on the project.
+                                </p>
+
+                                <small class="text-primary fw-semibold">
+                                    Current Stage
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Step 4 -->
+                        <div class="d-flex mb-4">
+
+                            <div class="me-3">
+
+                                <div class="bg-light text-secondary rounded-circle
+                                            d-flex align-items-center justify-content-center"
+                                     style="width:42px;height:42px;">
+
+                                    <i class="bi bi-upload"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    Submitted for Review
+                                </h6>
+
+                                <p class="text-muted small mb-1">
+                                    Submit your completed work to the business.
+                                </p>
+
+                                <small class="text-muted">
+                                    Upcoming
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Step 5 -->
+                        <div class="d-flex">
+
+                            <div class="me-3">
+
+                                <div class="bg-light text-secondary rounded-circle
+                                            d-flex align-items-center justify-content-center"
+                                     style="width:42px;height:42px;">
+
+                                    <i class="bi bi-check-circle"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    Project Completed
+                                </h6>
+
+                                <p class="text-muted small mb-0">
+                                    Business reviews and accepts the final work.
+                                </p>
+
+                                <small class="text-muted">
+                                    Upcoming
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project Details -->
+                <div class="card border-0 shadow-sm mb-4">
+
+                    <div class="card-body p-4">
+
+                        <h5 class="fw-bold mb-3">
+                            Project Details
+                        </h5>
+
+                        <p class="text-muted">
+                            Build a professional and responsive website
+                            for a local business using HTML, CSS and
+                            JavaScript.
+                        </p>
+
+                        <h6 class="fw-bold mt-4 mb-3">
+                            Required Skills
+                        </h6>
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <span class="badge bg-light text-dark border px-3 py-2">
+                                HTML
+                            </span>
+
+                            <span class="badge bg-light text-dark border px-3 py-2">
+                                CSS
+                            </span>
+
+                            <span class="badge bg-light text-dark border px-3 py-2">
+                                JavaScript
+                            </span>
+
+                            <span class="badge bg-light text-dark border px-3 py-2">
+                                Responsive Design
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Deliverables -->
+                <div class="card border-0 shadow-sm">
+
+                    <div class="card-body p-4">
+
+                        <h5 class="fw-bold mb-3">
+                            Project Deliverables
+                        </h5>
+
+                        <div class="list-group list-group-flush">
+
+                            <div class="list-group-item px-0">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Responsive business website
+                            </div>
+
+                            <div class="list-group-item px-0">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Mobile-friendly design
+                            </div>
+
+                            <div class="list-group-item px-0">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                HTML, CSS and JavaScript files
+                            </div>
+
+                            <div class="list-group-item px-0">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                Final project handover
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RIGHT SIDEBAR ================= -->
+            <div class="col-lg-4">
+
+                <!-- Business -->
+                <div class="card border-0 shadow-sm mb-4">
+
+                    <div class="card-body p-4">
+
+                        <h5 class="fw-bold mb-3">
+                            Business
+                        </h5>
+
+                        <div class="d-flex align-items-center mb-3">
+
+                            <div class="bg-primary text-white rounded-circle
+                                        d-flex align-items-center justify-content-center"
+                                 style="width:52px;height:52px;">
+
+                                <i class="bi bi-building fs-5"></i>
+
+                            </div>
+
+                            <div class="ms-3">
+
+                                <h6 class="fw-bold mb-1">
+                                    ABC Local Business
+                                </h6>
+
+                                <small class="text-muted">
+                                    Nawabshah, Sindh
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <p class="text-muted small mb-0">
+                            Local business working with SkillBridge
+                            to find student talent for digital projects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Deadline Card -->
+                <div class="card border-0 shadow-sm mb-4">
+
+                    <div class="card-body p-4">
+
+                        <h5 class="fw-bold mb-3">
+                            Project Deadline
+                        </h5>
+
+                        <div class="d-flex align-items-center">
+
+                            <div class="bg-light rounded p-3 me-3">
+
+                                <i class="bi bi-calendar3
+                                          text-primary fs-4"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    15 Days
+                                </strong>
+
+                                <small class="text-muted d-block">
+                                    Remaining project period
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Actions -->
+                <div class="card border-0 shadow-sm">
+
+                    <div class="card-body p-4">
+
+                        <h5 class="fw-bold mb-3">
+                            Project Actions
+                        </h5>
+
+                        <button class="btn btn-primary w-100 mb-2"
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#submitWorkModal">
+
+                            <i class="bi bi-upload me-2"></i>
+                            Submit Work
+
+                        </button>
+
+                        <button class="btn btn-outline-secondary w-100"
+                                type="button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#messageModal">
+
+                            <i class="bi bi-chat-dots me-2"></i>
+                            Contact Business
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SUBMIT WORK MODAL ================= -->
+<div class="modal fade"
+     id="submitWorkModal"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title fw-bold">
+                    Submit Project Work
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p class="text-muted">
+                    Upload your completed project files and provide
+                    a short message for the business.
+                </p>
+
+                <label class="form-label fw-semibold">
+                    Project Files
+                </label>
+
+                <input type="file"
+                       class="form-control mb-3">
+
+                <label class="form-label fw-semibold">
+                    Message
+                </label>
+
+                <textarea class="form-control"
+                          rows="4"
+                          placeholder="Write a message about your submission...">
+                </textarea>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cancel
+                </button>
+
+                <button type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal">
+
+                    Submit for Review
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= MESSAGE MODAL ================= -->
+<div class="modal fade"
+     id="messageModal"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title fw-bold">
+                    Contact Business
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <label class="form-label fw-semibold">
+                    Message
+                </label>
+
+                <textarea class="form-control"
+                          rows="5"
+                          placeholder="Write your message...">
+                </textarea>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Cancel
+                </button>
+
+                <button type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal">
+
+                    <i class="bi bi-send me-1"></i>
+                    Send Message
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white py-4">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <h5 class="fw-bold">
+                    <i class="bi bi-briefcase-fill me-2"></i>
+                    SkillBridge
+                </h5>
+
+                <p class="text-white-50 mb-0">
+                    Connecting students with real-world opportunities.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <a href="student-dashboard.html"
+                   class="text-white-50 text-decoration-none me-3">
+                    Dashboard
+                </a>
+
+                <a href="projects.html"
+                   class="text-white-50 text-decoration-none me-3">
+                    Projects
+                </a>
+
+                <a href="my-applications.html"
+                   class="text-white-50 text-decoration-none">
+                    Applications
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center text-white-50 small">
+            © 2026 SkillBridge. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

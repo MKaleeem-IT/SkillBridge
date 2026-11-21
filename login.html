@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | SkillBridge</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+
+            <i class="bi bi-briefcase-fill"></i>
+
+            SkillBridge
+
+        </a>
+
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="about.html">
+                        About
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="projects.html">
+                        Find Projects
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="students.html">
+                        Find Talent
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="how-it-works.html">
+                        How It Works
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-3">
+
+                    <a class="btn btn-primary px-4"
+                       href="register.html">
+
+                        Register
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= LOGIN SECTION ================= -->
+
+<section class="auth-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-8 col-lg-6 col-xl-5">
+
+                <div class="auth-card">
+
+
+                    <!-- HEADER -->
+
+                    <div class="auth-header text-center">
+
+                        <div class="auth-icon">
+
+                            <i class="bi bi-box-arrow-in-right"></i>
+
+                        </div>
+
+
+                        <h1>Welcome Back</h1>
+
+                        <p>
+                            Login to your SkillBridge account
+                            and continue your journey.
+                        </p>
+
+                    </div>
+
+
+                    <!-- ACCOUNT TYPE -->
+
+                    <div class="mb-4">
+
+                        <label class="form-label fw-semibold">
+                            Login as
+                        </label>
+
+
+                        <div class="row g-3">
+
+
+                            <!-- STUDENT -->
+
+                            <div class="col-6">
+
+                                <input type="radio"
+                                       class="btn-check"
+                                       name="loginType"
+                                       id="studentLogin"
+                                       value="student"
+                                       checked>
+
+                                <label class="login-role-card"
+                                       for="studentLogin">
+
+                                    <i class="bi bi-mortarboard-fill"></i>
+
+                                    <span>Student</span>
+
+                                </label>
+
+                            </div>
+
+
+                            <!-- BUSINESS -->
+
+                            <div class="col-6">
+
+                                <input type="radio"
+                                       class="btn-check"
+                                       name="loginType"
+                                       id="businessLogin"
+                                       value="business">
+
+                                <label class="login-role-card"
+                                       for="businessLogin">
+
+                                    <i class="bi bi-building-fill"></i>
+
+                                    <span>Business</span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOGIN FORM -->
+
+                    <form id="loginForm">
+
+
+                        <!-- EMAIL -->
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Email Address
+                            </label>
+
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+
+                                    <i class="bi bi-envelope"></i>
+
+                                </span>
+
+
+                                <input type="email"
+                                       id="loginEmail"
+                                       class="form-control"
+                                       placeholder="Enter your email"
+                                       required>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Password
+                            </label>
+
+
+                            <div class="input-group">
+
+                                <span class="input-group-text">
+
+                                    <i class="bi bi-lock-fill"></i>
+
+                                </span>
+
+
+                                <input type="password"
+                                       id="loginPassword"
+                                       class="form-control"
+                                       placeholder="Enter your password"
+                                       required>
+
+
+                                <button type="button"
+                                        class="btn btn-outline-secondary"
+                                        id="togglePassword">
+
+                                    <i class="bi bi-eye"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- REMEMBER / FORGOT -->
+
+                        <div class="d-flex justify-content-between
+                                    align-items-center mb-4">
+
+                            <div class="form-check">
+
+                                <input class="form-check-input"
+                                       type="checkbox"
+                                       id="rememberMe">
+
+                                <label class="form-check-label"
+                                       for="rememberMe">
+
+                                    Remember me
+
+                                </label>
+
+                            </div>
+
+
+                            <a href="#"
+                               class="forgot-link">
+
+                                Forgot Password?
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- LOGIN BUTTON -->
+
+                        <button type="submit"
+                                class="btn btn-primary auth-submit">
+
+                            <i class="bi bi-box-arrow-in-right me-2"></i>
+
+                            Login
+
+                        </button>
+
+
+                    </form>
+
+
+                    <!-- REGISTER -->
+
+                    <div class="auth-footer text-center">
+
+                        <p class="mb-0">
+
+                            Don't have an account?
+
+                            <a href="register.html">
+                                Create an account
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer-section">
+
+    <div class="container text-center">
+
+        <h5>
+
+            <i class="bi bi-briefcase-fill"></i>
+
+            SkillBridge
+
+        </h5>
+
+
+        <p>
+
+            Connecting student talent with real business opportunities.
+
+        </p>
+
+
+        <p class="footer-copy">
+
+            © 2026 SkillBridge. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JS -->
+
+<script src="js/script.js"></script>
+
+
+<!-- ================= LOGIN JAVASCRIPT ================= -->
+
+<script>
+
+/* Show / Hide Password */
+
+document.getElementById("togglePassword").addEventListener("click", function () {
+
+    const password =
+        document.getElementById("loginPassword");
+
+    const icon =
+        this.querySelector("i");
+
+
+    if (password.type === "password") {
+
+        password.type = "text";
+
+        icon.classList.remove("bi-eye");
+
+        icon.classList.add("bi-eye-slash");
+
+    } else {
+
+        password.type = "password";
+
+        icon.classList.remove("bi-eye-slash");
+
+        icon.classList.add("bi-eye");
+
+    }
+
+});
+
+
+/* Demo Login */
+
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+
+    const selectedRole =
+        document.querySelector('input[name="loginType"]:checked').value;
+
+
+    const email =
+        document.getElementById("loginEmail").value.trim().toLowerCase();
+
+
+    const password =
+        document.getElementById("loginPassword").value;
+
+
+    /* ================= STUDENT DEMO ACCOUNT ================= */
+
+    if (
+        selectedRole === "student" &&
+        email === "student@skillbridge.com" &&
+        password === "123456"
+    ) {
+
+        window.location.href = "student-dashboard.html";
+
+        return;
+
+    }
+
+
+    /* ================= BUSINESS DEMO ACCOUNT ================= */
+
+    if (
+        selectedRole === "business" &&
+        email === "business@skillbridge.com" &&
+        password === "123456"
+    ) {
+
+        window.location.href = "business-dashboard.html";
+
+        return;
+
+    }
+
+
+    /* ================= INVALID LOGIN ================= */
+
+    alert(
+        "Invalid login details.\n\n" +
+        "Student Demo:\n" +
+        "Email: student@skillbridge.com\n" +
+        "Password: 123456\n\n" +
+        "Business Demo:\n" +
+        "Email: business@skillbridge.com\n" +
+        "Password: 123456"
+    );
+
+});
+
+</script>
+
+
+</body>
+
+</html>

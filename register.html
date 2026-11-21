@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | SkillBridge</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-briefcase-fill"></i>
+            SkillBridge
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="projects.html">Find Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="students.html">Find Talent</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="how-it-works.html">How It Works</a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-outline-primary px-4"
+                       href="login.html">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= REGISTER SECTION ================= -->
+
+<section class="auth-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9 col-xl-8">
+
+                <div class="auth-card">
+
+
+                    <!-- ================= ACCOUNT TYPE ================= -->
+
+                    <div id="accountSelection">
+
+                        <div class="auth-header text-center">
+
+                            <div class="auth-icon">
+                                <i class="bi bi-person-plus-fill"></i>
+                            </div>
+
+                            <h1>Join SkillBridge</h1>
+
+                            <p>
+                                Choose how you want to use SkillBridge
+                                and start your journey.
+                            </p>
+
+                        </div>
+
+
+                        <h5 class="text-center mb-4">
+                            How do you want to use SkillBridge?
+                        </h5>
+
+
+                        <div class="row g-4">
+
+
+                            <!-- STUDENT -->
+
+                            <div class="col-md-6">
+
+                                <div class="role-card"
+                                     onclick="showStudentForm()">
+
+                                    <div class="role-icon student-role-icon">
+
+                                        <i class="bi bi-mortarboard-fill"></i>
+
+                                    </div>
+
+                                    <h3>I'm a Student</h3>
+
+                                    <p>
+                                        I want to find projects,
+                                        gain real-world experience,
+                                        and grow my portfolio.
+                                    </p>
+
+                                    <ul>
+
+                                        <li>
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            Find real projects
+                                        </li>
+
+                                        <li>
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            Showcase your skills
+                                        </li>
+
+                                        <li>
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            Build your experience
+                                        </li>
+
+                                    </ul>
+
+                                    <button type="button"
+                                            class="btn btn-primary w-100 mt-3">
+
+                                        Continue as Student
+                                        <i class="bi bi-arrow-right ms-2"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- BUSINESS -->
+
+                            <div class="col-md-6">
+
+                                <div class="role-card"
+                                     onclick="showBusinessForm()">
+
+                                    <div class="role-icon business-role-icon">
+
+                                        <i class="bi bi-building-fill"></i>
+
+                                    </div>
+
+                                    <h3>I'm a Business</h3>
+
+                                    <p>
+                                        I want to hire skilled students,
+                                        post projects, and find talent.
+                                    </p>
+
+                                    <ul>
+
+                                        <li>
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            Post projects
+                                        </li>
+
+                                        <li>
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            Find skilled students
+                                        </li>
+
+                                        <li>
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            Grow your business
+                                        </li>
+
+                                    </ul>
+
+                                    <button type="button"
+                                            class="btn btn-outline-primary w-100 mt-3">
+
+                                        Continue as Business
+                                        <i class="bi bi-arrow-right ms-2"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="auth-footer text-center mt-4">
+
+                            <p class="mb-0">
+
+                                Already have an account?
+
+                                <a href="login.html">
+                                    Login here
+                                </a>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================= STUDENT FORM ================= -->
+
+                    <div id="studentFormSection" style="display:none;">
+
+                        <div class="auth-header text-center">
+
+                            <div class="auth-icon">
+
+                                <i class="bi bi-mortarboard-fill"></i>
+
+                            </div>
+
+                            <h1>Student Registration</h1>
+
+                            <p>
+                                Create your student profile and start
+                                finding real project opportunities.
+                            </p>
+
+                        </div>
+
+
+                        <button type="button"
+                                class="btn btn-light mb-4"
+                                onclick="backToSelection()">
+
+                            <i class="bi bi-arrow-left me-2"></i>
+                            Change Account Type
+
+                        </button>
+
+
+                        <form id="studentForm">
+
+                            <div class="row g-3">
+
+
+                                <!-- Full Name -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Full Name
+                                    </label>
+
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Enter your full name"
+                                           required>
+
+                                </div>
+
+
+                                <!-- University -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        University
+                                    </label>
+
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Enter your university"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Email -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Email Address
+                                    </label>
+
+                                    <input type="email"
+                                           class="form-control"
+                                           placeholder="Enter your email"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Phone -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Phone Number
+                                    </label>
+
+                                    <input type="tel"
+                                           class="form-control"
+                                           placeholder="Enter phone number"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Location -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Location
+                                    </label>
+
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="City / Area"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Experience -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Experience Level
+                                    </label>
+
+                                    <select class="form-select" required>
+
+                                        <option value="">
+                                            Select experience level
+                                        </option>
+
+                                        <option>
+                                            Beginner
+                                        </option>
+
+                                        <option>
+                                            Intermediate
+                                        </option>
+
+                                        <option>
+                                            Advanced
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Skills -->
+
+                                <div class="col-12">
+
+                                    <label class="form-label">
+                                        Skills
+                                    </label>
+
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="e.g. Web Development, Graphic Design, Data Analysis"
+                                           required>
+
+                                    <small class="text-muted">
+                                        Add your main skills separated by commas.
+                                    </small>
+
+                                </div>
+
+
+                                <!-- Portfolio -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Portfolio / LinkedIn
+                                    </label>
+
+                                    <input type="url"
+                                           class="form-control"
+                                           placeholder="https://">
+
+                                </div>
+
+
+                                <!-- Availability -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Availability
+                                    </label>
+
+                                    <select class="form-select">
+
+                                        <option>
+                                            Available
+                                        </option>
+
+                                        <option>
+                                            Part-time
+                                        </option>
+
+                                        <option>
+                                            Currently Busy
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Password -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Password
+                                    </label>
+
+                                    <input type="password"
+                                           class="form-control"
+                                           id="studentPassword"
+                                           placeholder="Create password"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Confirm Password -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Confirm Password
+                                    </label>
+
+                                    <input type="password"
+                                           class="form-control"
+                                           id="studentConfirmPassword"
+                                           placeholder="Confirm password"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Terms -->
+
+                            <div class="form-check mt-4">
+
+                                <input class="form-check-input"
+                                       type="checkbox"
+                                       required>
+
+                                <label class="form-check-label">
+
+                                    I agree to the SkillBridge
+                                    <a href="#">Terms & Conditions</a>
+                                    and
+                                    <a href="#">Privacy Policy</a>.
+
+                                </label>
+
+                            </div>
+
+
+                            <button type="submit"
+                                    class="btn btn-primary auth-submit mt-4">
+
+                                <i class="bi bi-person-plus-fill me-2"></i>
+
+                                Create Student Account
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- ================= BUSINESS FORM ================= -->
+
+                    <div id="businessFormSection" style="display:none;">
+
+                        <div class="auth-header text-center">
+
+                            <div class="auth-icon">
+
+                                <i class="bi bi-building-fill"></i>
+
+                            </div>
+
+                            <h1>Business Registration</h1>
+
+                            <p>
+                                Create your business profile and start
+                                finding skilled student talent.
+                            </p>
+
+                        </div>
+
+
+                        <button type="button"
+                                class="btn btn-light mb-4"
+                                onclick="backToSelection()">
+
+                            <i class="bi bi-arrow-left me-2"></i>
+                            Change Account Type
+
+                        </button>
+
+
+                        <form id="businessForm">
+
+                            <div class="row g-3">
+
+
+                                <!-- Business Name -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Business Name
+                                    </label>
+
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Enter business name"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Contact Person -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Contact Person
+                                    </label>
+
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="Enter contact person's name"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Business Email -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Business Email
+                                    </label>
+
+                                    <input type="email"
+                                           class="form-control"
+                                           placeholder="Enter business email"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Phone -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Phone Number
+                                    </label>
+
+                                    <input type="tel"
+                                           class="form-control"
+                                           placeholder="Enter business phone"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Business Type -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Business Type
+                                    </label>
+
+                                    <select class="form-select" required>
+
+                                        <option value="">
+                                            Select business type
+                                        </option>
+
+                                        <option>
+                                            Retail
+                                        </option>
+
+                                        <option>
+                                            Restaurant / Food
+                                        </option>
+
+                                        <option>
+                                            Education
+                                        </option>
+
+                                        <option>
+                                            E-commerce
+                                        </option>
+
+                                        <option>
+                                            Technology
+                                        </option>
+
+                                        <option>
+                                            Professional Services
+                                        </option>
+
+                                        <option>
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Location -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Business Location
+                                    </label>
+
+                                    <input type="text"
+                                           class="form-control"
+                                           placeholder="City / Area"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Website -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Website / Social Media
+                                    </label>
+
+                                    <input type="url"
+                                           class="form-control"
+                                           placeholder="https://">
+
+                                </div>
+
+
+                                <!-- Hiring Need -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        What do you need?
+                                    </label>
+
+                                    <select class="form-select">
+
+                                        <option value="">
+                                            Select a service
+                                        </option>
+
+                                        <option>
+                                            Web Development
+                                        </option>
+
+                                        <option>
+                                            Graphic Design
+                                        </option>
+
+                                        <option>
+                                            Data Analysis
+                                        </option>
+
+                                        <option>
+                                            Digital Marketing
+                                        </option>
+
+                                        <option>
+                                            Content Creation
+                                        </option>
+
+                                        <option>
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Password -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Password
+                                    </label>
+
+                                    <input type="password"
+                                           class="form-control"
+                                           id="businessPassword"
+                                           placeholder="Create password"
+                                           required>
+
+                                </div>
+
+
+                                <!-- Confirm Password -->
+
+                                <div class="col-md-6">
+
+                                    <label class="form-label">
+                                        Confirm Password
+                                    </label>
+
+                                    <input type="password"
+                                           class="form-control"
+                                           id="businessConfirmPassword"
+                                           placeholder="Confirm password"
+                                           required>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Terms -->
+
+                            <div class="form-check mt-4">
+
+                                <input class="form-check-input"
+                                       type="checkbox"
+                                       required>
+
+                                <label class="form-check-label">
+
+                                    I agree to the SkillBridge
+                                    <a href="#">Terms & Conditions</a>
+                                    and
+                                    <a href="#">Privacy Policy</a>.
+
+                                </label>
+
+                            </div>
+
+
+                            <button type="submit"
+                                    class="btn btn-primary auth-submit mt-4">
+
+                                <i class="bi bi-building-fill me-2"></i>
+
+                                Create Business Account
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer-section">
+
+    <div class="container text-center">
+
+        <h5>
+            <i class="bi bi-briefcase-fill"></i>
+            SkillBridge
+        </h5>
+
+        <p>
+            Connecting student talent with real business opportunities.
+        </p>
+
+        <p class="footer-copy">
+            © 2026 SkillBridge. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+
+<script src="js/script.js"></script>
+
+
+<!-- ================= PAGE JAVASCRIPT ================= -->
+
+<script>
+
+function showStudentForm() {
+
+    document.getElementById("accountSelection").style.display = "none";
+
+    document.getElementById("studentFormSection").style.display = "block";
+
+    document.getElementById("businessFormSection").style.display = "none";
+
+}
+
+
+function showBusinessForm() {
+
+    document.getElementById("accountSelection").style.display = "none";
+
+    document.getElementById("studentFormSection").style.display = "none";
+
+    document.getElementById("businessFormSection").style.display = "block";
+
+}
+
+
+function backToSelection() {
+
+    document.getElementById("accountSelection").style.display = "block";
+
+    document.getElementById("studentFormSection").style.display = "none";
+
+    document.getElementById("businessFormSection").style.display = "none";
+
+}
+
+
+/* Student Form */
+
+document.getElementById("studentForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const password =
+        document.getElementById("studentPassword").value;
+
+    const confirmPassword =
+        document.getElementById("studentConfirmPassword").value;
+
+    if (password !== confirmPassword) {
+
+        alert("Student passwords do not match.");
+
+        return;
+
+    }
+
+    alert("Student registration submitted successfully!");
+
+});
+
+
+/* Business Form */
+
+document.getElementById("businessForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const password =
+        document.getElementById("businessPassword").value;
+
+    const confirmPassword =
+        document.getElementById("businessConfirmPassword").value;
+
+    if (password !== confirmPassword) {
+
+        alert("Business passwords do not match.");
+
+        return;
+
+    }
+
+    alert("Business registration submitted successfully!");
+
+});
+
+</script>
+
+</body>
+</html>

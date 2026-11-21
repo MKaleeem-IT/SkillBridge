@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | SkillBridge</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+
+<!-- ================= TOP NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+    <div class="container-fluid px-lg-4">
+
+        <!-- Logo -->
+
+        <a class="navbar-brand fw-bold" href="index.html">
+
+            <i class="bi bi-briefcase-fill"></i>
+            SkillBridge
+
+        </a>
+
+
+        <!-- Mobile Button -->
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#dashboardNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Navigation -->
+
+        <div class="collapse navbar-collapse" id="dashboardNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <!-- Find Projects -->
+
+                <li class="nav-item me-lg-2">
+
+                    <a class="nav-link"
+                       href="projects.html">
+
+                        <i class="bi bi-search me-1"></i>
+                        Find Projects
+
+                    </a>
+
+                </li>
+
+
+                <!-- My Applications -->
+
+                <li class="nav-item me-lg-2">
+
+                    <a class="nav-link"
+                       href="my-applications.html">
+
+                        <i class="bi bi-send me-1"></i>
+                        My Applications
+
+                    </a>
+
+                </li>
+
+
+                <!-- Reviews -->
+
+                <li class="nav-item me-lg-2">
+
+                    <a class="nav-link"
+                       href="reviews.html">
+
+                        <i class="bi bi-star me-1"></i>
+                        Reviews
+
+                    </a>
+
+                </li>
+
+
+                <!-- Notifications -->
+
+                <li class="nav-item me-lg-3">
+
+                    <a class="nav-link dashboard-icon-link"
+                       href="notifications.html">
+
+                        <i class="bi bi-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- Student -->
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle d-flex align-items-center"
+                       href="#"
+                       role="button"
+                       data-bs-toggle="dropdown">
+
+                        <span class="dashboard-avatar me-2">
+                            MK
+                        </span>
+
+                        <span>
+                            Muhammad Kaleem
+                        </span>
+
+                    </a>
+
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <!-- My Profile -->
+
+                        <li>
+
+                            <a href="student-profile.html"
+                               class="dropdown-item">
+
+                                <i class="bi bi-person me-2"></i>
+                                My Profile
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- My Applications -->
+
+                        <li>
+
+                            <a href="my-applications.html"
+                               class="dropdown-item">
+
+                                <i class="bi bi-send me-2"></i>
+                                My Applications
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- Reviews -->
+
+                        <li>
+
+                            <a href="reviews.html"
+                               class="dropdown-item">
+
+                                <i class="bi bi-star me-2"></i>
+                                Reviews
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- Settings -->
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="settings.html">
+
+                                <i class="bi bi-gear me-2"></i>
+                                Settings
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+
+                        <!-- Logout -->
+
+                        <li>
+
+                            <a class="dropdown-item text-danger"
+                               href="login.html">
+
+                                <i class="bi bi-box-arrow-right me-2"></i>
+                                Logout
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<div class="dashboard-wrapper">
+
+    <div class="container-fluid px-lg-4 py-4">
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <div class="dashboard-welcome mb-4">
+
+            <div>
+
+                <span class="dashboard-small-label">
+                    STUDENT DASHBOARD
+                </span>
+
+                <h1>
+                    Welcome back, Muhammad! 👋
+                </h1>
+
+                <p>
+                    Find new projects, manage your applications,
+                    and grow your professional experience.
+                </p>
+
+            </div>
+
+
+            <div class="d-flex gap-2 flex-wrap">
+
+                <!-- Browse Projects -->
+
+                <a href="projects.html"
+                   class="btn btn-primary">
+
+                    <i class="bi bi-search me-2"></i>
+
+                    Browse Projects
+
+                </a>
+
+
+                <!-- My Applications -->
+
+                <a href="my-applications.html"
+                   class="btn btn-outline-primary">
+
+                    <i class="bi bi-send me-2"></i>
+
+                    My Applications
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= STAT CARDS ================= -->
+
+        <div class="row g-4 mb-4">
+
+
+            <!-- Applications -->
+
+            <div class="col-sm-6 col-xl-3">
+
+                <a href="my-applications.html"
+                   class="text-decoration-none text-dark">
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="dashboard-stat-icon">
+
+                            <i class="bi bi-send"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Applications
+                            </span>
+
+                            <h3>
+                                8
+                            </h3>
+
+                            <small>
+                                2 pending
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Active Projects -->
+
+            <div class="col-sm-6 col-xl-3">
+
+                <a href="student-project-tracking.html"
+                   class="text-decoration-none text-dark">
+
+                    <div class="dashboard-stat-card">
+
+                        <div class="dashboard-stat-icon">
+
+                            <i class="bi bi-kanban"></i>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Active Projects
+                            </span>
+
+                            <h3>
+                                3
+                            </h3>
+
+                            <small>
+                                Currently working
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- Completed -->
+
+            <div class="col-sm-6 col-xl-3">
+
+                <div class="dashboard-stat-card">
+
+                    <div class="dashboard-stat-icon">
+
+                        <i class="bi bi-check-circle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Completed
+                        </span>
+
+                        <h3>
+                            12
+                        </h3>
+
+                        <small>
+                            Projects completed
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Earnings -->
+
+            <div class="col-sm-6 col-xl-3">
+
+                <div class="dashboard-stat-card">
+
+                    <div class="dashboard-stat-icon">
+
+                        <i class="bi bi-wallet2"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Earnings
+                        </span>
+
+                        <h3>
+                            Rs. 48K
+                        </h3>
+
+                        <small>
+                            From completed projects
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <div class="row g-4">
+
+
+            <!-- ================= LEFT COLUMN ================= -->
+
+            <div class="col-lg-8">
+
+
+                <!-- PROFILE COMPLETION -->
+
+                <div class="dashboard-card mb-4">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h4>
+                                Profile Completion
+                            </h4>
+
+                            <p>
+                                Complete your profile to attract more
+                                business opportunities.
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            80%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress dashboard-progress">
+
+                        <div class="progress-bar"
+                             role="progressbar"
+                             style="width: 80%;">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-tasks mt-3">
+
+                        <span>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Basic Information
+                        </span>
+
+                        <span>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Skills
+                        </span>
+
+                        <span>
+                            <i class="bi bi-check-circle-fill"></i>
+                            Portfolio
+                        </span>
+
+                        <span class="task-pending">
+                            <i class="bi bi-circle"></i>
+                            Add Certifications
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ACTIVE PROJECTS -->
+
+                <div class="dashboard-card mb-4">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h4>
+                                Active Projects
+                            </h4>
+
+                            <p>
+                                Projects you are currently working on.
+                            </p>
+
+                        </div>
+
+                        <!-- STUDENT PROJECT TRACKING -->
+
+                        <a href="student-project-tracking.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <!-- Project 1 -->
+
+                    <div class="dashboard-project">
+
+                        <div class="project-title-area">
+
+                            <div class="project-mini-icon">
+
+                                <i class="bi bi-code-slash"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h5>
+                                    Business Website Development
+                                </h5>
+
+                                <span>
+                                    ABC Local Business
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-progress-area">
+
+                            <div class="d-flex justify-content-between">
+
+                                <small>
+                                    Progress
+                                </small>
+
+                                <small>
+                                    70%
+                                </small>
+
+                            </div>
+
+
+                            <div class="progress">
+
+                                <div class="progress-bar"
+                                     style="width:70%;">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="status-badge status-active">
+                            In Progress
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Project 2 -->
+
+                    <div class="dashboard-project">
+
+                        <div class="project-title-area">
+
+                            <div class="project-mini-icon">
+
+                                <i class="bi bi-palette"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h5>
+                                    Social Media Design
+                                </h5>
+
+                                <span>
+                                    Creative Store
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-progress-area">
+
+                            <div class="d-flex justify-content-between">
+
+                                <small>
+                                    Progress
+                                </small>
+
+                                <small>
+                                    40%
+                                </small>
+
+                            </div>
+
+
+                            <div class="progress">
+
+                                <div class="progress-bar"
+                                     style="width:40%;">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="status-badge status-review">
+                            Under Review
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- RECOMMENDED PROJECTS -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <div>
+
+                            <h4>
+                                Recommended Projects
+                            </h4>
+
+                            <p>
+                                Opportunities matching your skills.
+                            </p>
+
+                        </div>
+
+                        <a href="projects.html">
+                            Browse All
+                        </a>
+
+                    </div>
+
+
+                    <!-- Recommended Project 1 -->
+
+                    <div class="recommended-project">
+
+                        <div>
+
+                            <span class="project-category-small">
+                                WEB DEVELOPMENT
+                            </span>
+
+                            <h5>
+                                Build a Business Website
+                            </h5>
+
+                            <p>
+                                Create a responsive website for
+                                a local business.
+                            </p>
+
+                            <div class="project-meta">
+
+                                <span>
+
+                                    <i class="bi bi-wallet2"></i>
+
+                                    Rs. 10,000
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-calendar3"></i>
+
+                                    15 Days
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a href="projects.html"
+                           class="btn btn-outline-primary">
+
+                            View
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- Recommended Project 2 -->
+
+                    <div class="recommended-project">
+
+                        <div>
+
+                            <span class="project-category-small">
+                                DATA ANALYTICS
+                            </span>
+
+                            <h5>
+                                Analyze Business Data
+                            </h5>
+
+                            <p>
+                                Analyze sales data and prepare
+                                useful business insights.
+                            </p>
+
+                            <div class="project-meta">
+
+                                <span>
+
+                                    <i class="bi bi-wallet2"></i>
+
+                                    Rs. 8,000
+
+                                </span>
+
+
+                                <span>
+
+                                    <i class="bi bi-calendar3"></i>
+
+                                    12 Days
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a href="projects.html"
+                           class="btn btn-outline-primary">
+
+                            View
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= RIGHT COLUMN ================= -->
+
+            <div class="col-lg-4">
+
+
+                <!-- PROFILE CARD -->
+
+                <div class="dashboard-card profile-dashboard-card mb-4">
+
+                    <div class="text-center">
+
+                        <div class="dashboard-large-avatar">
+                            MK
+                        </div>
+
+                        <h4>
+                            Muhammad Kaleem
+                        </h4>
+
+                        <p class="student-role-dashboard">
+                            Web Developer
+                        </p>
+
+                        <span class="availability-badge">
+
+                            <i class="bi bi-circle-fill"></i>
+
+                            Available
+
+                        </span>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <div class="dashboard-info-row">
+
+                        <span>
+
+                            <i class="bi bi-geo-alt"></i>
+                            Location
+
+                        </span>
+
+                        <strong>
+                            Sindh, Pakistan
+                        </strong>
+
+                    </div>
+
+
+                    <div class="dashboard-info-row">
+
+                        <span>
+
+                            <i class="bi bi-star"></i>
+                            Rating
+
+                        </span>
+
+                        <strong>
+                            ⭐ 4.8
+                        </strong>
+
+                    </div>
+
+
+                    <div class="dashboard-info-row">
+
+                        <span>
+
+                            <i class="bi bi-briefcase"></i>
+                            Completed
+
+                        </span>
+
+                        <strong>
+                            12 Projects
+                        </strong>
+
+                    </div>
+
+
+                    <a href="edit-student-profile.html"
+                       class="btn btn-outline-primary w-100 mt-3">
+
+                        <i class="bi bi-pencil me-2"></i>
+
+                        Edit Profile
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- SKILLS -->
+
+                <div class="dashboard-card mb-4">
+
+                    <div class="dashboard-card-header">
+
+                        <h4>
+                            My Skills
+                        </h4>
+
+                        <a href="edit-student-profile.html">
+                            Edit
+                        </a>
+
+                    </div>
+
+
+                    <div class="dashboard-skills">
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>JavaScript</span>
+
+                        <span>Bootstrap</span>
+
+                        <span>Web Development</span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NOTIFICATIONS -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-header">
+
+                        <h4>
+                            Recent Notifications
+                        </h4>
+
+                        <!-- CONNECTED -->
+
+                        <a href="notifications.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <!-- Notification 1 -->
+
+                    <div class="notification-item">
+
+                        <div class="notification-icon">
+
+                            <i class="bi bi-check-circle"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Application Viewed
+                            </strong>
+
+                            <p>
+                                ABC Business viewed your application.
+                            </p>
+
+                            <small>
+                                2 hours ago
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Notification 2 -->
+
+                    <div class="notification-item">
+
+                        <div class="notification-icon">
+
+                            <i class="bi bi-chat"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                New Message
+                            </strong>
+
+                            <p>
+                                You received a message from a client.
+                            </p>
+
+                            <small>
+                                Yesterday
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Notification 3 - Connected to Reviews -->
+
+                    <a href="reviews.html"
+                       class="text-decoration-none text-dark">
+
+                        <div class="notification-item">
+
+                            <div class="notification-icon">
+
+                                <i class="bi bi-star"></i>
+
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    New Review
+                                </strong>
+
+                                <p>
+                                    You received a 5-star project review.
+                                </p>
+
+                                <small>
+                                    2 days ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer-section">
+
+    <div class="container text-center">
+
+        <h5>
+
+            <i class="bi bi-briefcase-fill"></i>
+            SkillBridge
+
+        </h5>
+
+        <p>
+            Connecting student talent with real business opportunities.
+        </p>
+
+        <p class="footer-copy">
+            © 2026 SkillBridge. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JS -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
